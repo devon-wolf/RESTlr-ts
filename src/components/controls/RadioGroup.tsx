@@ -1,5 +1,6 @@
-import React, { ChangeEvent, useState } from 'react';
+import React from 'react';
 import RadioButton from './RadioButton';
+import useRadio from '../../hooks/useRadio';
 
 type RadioGroupProps = {
     radioGroup: string;
@@ -7,11 +8,7 @@ type RadioGroupProps = {
 };
 
 const RadioGroup = ({ radioGroup, radioNames }: RadioGroupProps) => {
-    const [selectedRadio, setSelectedRadio] = useState('');
-
-    const handleRadioChange = (e: ChangeEvent<HTMLInputElement>) => {
-        setSelectedRadio(e.target.value);
-    }
+    const { selectedRadio, handleRadioChange } = useRadio();
 
     return (
         <div className="RadioGroup">
