@@ -4,7 +4,7 @@ import './Header.css';
 const Header = () => {
     return (
         <header className="Header">
-           RESTlr 
+           <h2>RESTlr</h2> 
         </header>
     )
 };
