@@ -1,14 +1,14 @@
-import React from 'react';
+import React, { ChangeEventHandler } from 'react';
 import RadioButton from './RadioButton';
-import useRadio from '../../hooks/useRadio';
 
 type RadioGroupProps = {
     radioGroup: string;
     radioNames: string[];
+    handleRadioChange: ChangeEventHandler;
+    selectedRadio: string;
 };
 
-const RadioGroup = ({ radioGroup, radioNames }: RadioGroupProps) => {
-    const { selectedRadio, handleRadioChange } = useRadio();
+const RadioGroup = ({ radioGroup, radioNames, handleRadioChange, selectedRadio }: RadioGroupProps) => {
 
     return (
         <div className="RadioGroup">
