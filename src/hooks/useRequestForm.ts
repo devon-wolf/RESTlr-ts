@@ -1,12 +1,13 @@
 import { FormEvent, useState } from 'react';
+import { getRequest } from '../services/fetch-utils';
 
 const useRequestForm = () => {
     const [address, setAddress] = useState('');
 
-    const handleFormSubmit = (e: FormEvent) => {
+    const handleFormSubmit = async (e: FormEvent) => {
         e.preventDefault();
-        // do stuff
-        console.log(address);
+        const response = await getRequest(address);
+        console.log(response);
         setAddress('');
     };
 
