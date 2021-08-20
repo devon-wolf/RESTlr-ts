@@ -7,7 +7,7 @@ import './MainPage.css';
 
 const MainPage = () => {
     // const { results } = useReqResults();
-    const [results, setResults] = useState<unknown[]>([]);
+    const [results, setResults] = useState<unknown>(null);
     const [address, setAddress] = useState('');
 
     const handleFormSubmit = async (e: FormEvent) => {
