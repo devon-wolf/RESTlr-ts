@@ -2,7 +2,6 @@ import React from 'react';
 import { useState, FormEvent } from 'react';
 import SearchBox from '../components/controls/SearchBox';
 import Results from '../components/displays/Results';
-import useReqResults from '../hooks/useReqResults';
 import { getRequest } from '../services/fetch-utils';
 import './MainPage.css';
 
