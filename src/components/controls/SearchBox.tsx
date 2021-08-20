@@ -1,12 +1,12 @@
-import React, { ChangeEvent, ChangeEventHandler, Dispatch, FormEventHandler, SetStateAction } from 'react';
+import React, { FormEventHandler } from 'react';
 import './SearchBox.css';
 import RadioGroup from './RadioGroup';
 
 type SearchBoxProps = {
     method: string;
-    handleRadioChange: ChangeEventHandler;
+    handleRadioChange: FormEventHandler;
     address: string;
-    setAddress: Dispatch<SetStateAction<string>>;
+    handleInput: FormEventHandler;
     handleFormSubmit: FormEventHandler;
 }
 
@@ -14,13 +14,10 @@ const SearchBox = ({
     method, 
     handleRadioChange, 
     address, 
-    setAddress, 
+    handleInput, 
     handleFormSubmit 
 }: SearchBoxProps) => {
 
-    const handleInput = (e: ChangeEvent<HTMLInputElement>) => {
-        setAddress(e.target.value);
-    };
 
     return (
         <div className="SearchBox">
@@ -38,7 +35,11 @@ const SearchBox = ({
                     selectedRadio={method}
                 />
 
-                <input value={address} onInput={handleInput}/>
+                <input
+                    value={address}
+                    onInput={handleInput}
+                />
+
                 <button>CLICK</button>
             </form>
         </div>

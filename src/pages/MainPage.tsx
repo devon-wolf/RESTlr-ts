@@ -1,23 +1,14 @@
 import React from 'react';
-import { useState, FormEvent } from 'react';
 import SearchBox from '../components/controls/SearchBox';
 import Results from '../components/displays/Results';
 import useRadio from '../hooks/useRadio';
-import { getRequest } from '../services/fetch-utils';
+import useRequestForm from '../hooks/useRequestForm';
+
 import './MainPage.css';
 
 const MainPage = () => {
-    const [results, setResults] = useState<unknown>(null);
-    const [address, setAddress] = useState('');
     const { method, handleRadioChange } = useRadio();
-
-    const handleFormSubmit = async (e: FormEvent) => {
-        e.preventDefault();
-        let response = await getRequest(address);
-        console.log(response);
-        setResults(response || null);
-        setAddress('');
-    };
+    const { results, address, handleInput, handleFormSubmit } = useRequestForm(method);
 
     return (
         <main className="MainPage">
@@ -25,7 +16,7 @@ const MainPage = () => {
                 method={method}
                 handleRadioChange={handleRadioChange}
                 address={address}
-                setAddress={setAddress}
+                handleInput={handleInput}
                 handleFormSubmit={handleFormSubmit}
             />
 
