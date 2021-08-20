@@ -2,7 +2,6 @@ import React, { ChangeEvent, Dispatch, FormEventHandler, SetStateAction } from '
 import './SearchBox.css';
 import RadioGroup from './RadioGroup';
 import useRadio from '../../hooks/useRadio';
-import useRequestForm from '../../hooks/useRequestForm';
 
 type SearchBoxProps = {
     address: string;
