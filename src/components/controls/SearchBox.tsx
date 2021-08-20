@@ -1,20 +1,26 @@
-import React, { ChangeEvent, Dispatch, FormEventHandler, SetStateAction } from 'react';
+import React, { ChangeEvent, ChangeEventHandler, Dispatch, FormEventHandler, SetStateAction } from 'react';
 import './SearchBox.css';
 import RadioGroup from './RadioGroup';
-import useRadio from '../../hooks/useRadio';
 
 type SearchBoxProps = {
+    method: string;
+    handleRadioChange: ChangeEventHandler;
     address: string;
     setAddress: Dispatch<SetStateAction<string>>;
     handleFormSubmit: FormEventHandler;
 }
 
-const SearchBox = ({ address, setAddress, handleFormSubmit }: SearchBoxProps) => {
-    const { selectedRadio, handleRadioChange } = useRadio();
+const SearchBox = ({ 
+    method, 
+    handleRadioChange, 
+    address, 
+    setAddress, 
+    handleFormSubmit 
+}: SearchBoxProps) => {
 
     const handleInput = (e: ChangeEvent<HTMLInputElement>) => {
         setAddress(e.target.value);
-    }
+    };
 
     return (
         <div className="SearchBox">
@@ -29,7 +35,7 @@ const SearchBox = ({ address, setAddress, handleFormSubmit }: SearchBoxProps) =>
                         'DELETE'
                     ]}
                     handleRadioChange={handleRadioChange}
-                    selectedRadio={selectedRadio}
+                    selectedRadio={method}
                 />
 
                 <input value={address} onInput={handleInput}/>
