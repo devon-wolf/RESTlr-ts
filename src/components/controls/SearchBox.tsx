@@ -1,14 +1,15 @@
-import React, { FormEvent } from 'react';
+import React, { ChangeEvent } from 'react';
 import './SearchBox.css';
 import RadioGroup from './RadioGroup';
 import useRadio from '../../hooks/useRadio';
+import useRequestForm from '../../hooks/useRequestForm';
 
 const SearchBox = () => {
     const { selectedRadio, handleRadioChange } = useRadio();
-    
-    const handleFormSubmit = (e: FormEvent) => {
-        e.preventDefault();
-        console.log(selectedRadio);
+    const { address, setAddress, handleFormSubmit } = useRequestForm();
+
+    const handleInput = (e: ChangeEvent<HTMLInputElement>) => {
+        setAddress(e.target.value);
     }
 
     return (
@@ -26,6 +27,8 @@ const SearchBox = () => {
                     handleRadioChange={handleRadioChange}
                     selectedRadio={selectedRadio}
                 />
+
+                <input value={address} onInput={handleInput}/>
                 <button>CLICK</button>
             </form>
         </div>

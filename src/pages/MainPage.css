@@ -1,5 +1,5 @@
 .MainPage {
     background-color: blueviolet;
     display: grid;
-    grid-template-rows: 30% 70%; /* Search form and results display */
+    grid-template-rows: 20% 80%; /* Search form and results display */
 }
