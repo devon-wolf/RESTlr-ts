@@ -1,10 +1,14 @@
 import React from 'react';
 import './Results.css';
 
-const Results = () => {
+type ResultsProps = { results: unknown[] };
+
+const Results = ({ results }: ResultsProps) => {
+    console.log(results);
     return (
         <div className="Results">
-            Results
+            {results.length > 0 &&
+                results.map(result => <h4>GOT ONE</h4>)}
         </div>
     )
 };

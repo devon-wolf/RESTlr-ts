@@ -1,12 +1,17 @@
-import React, { ChangeEvent } from 'react';
+import React, { ChangeEvent, Dispatch, FormEventHandler, SetStateAction } from 'react';
 import './SearchBox.css';
 import RadioGroup from './RadioGroup';
 import useRadio from '../../hooks/useRadio';
 import useRequestForm from '../../hooks/useRequestForm';
 
-const SearchBox = () => {
+type SearchBoxProps = {
+    address: string;
+    setAddress: Dispatch<SetStateAction<string>>;
+    handleFormSubmit: FormEventHandler;
+}
+
+const SearchBox = ({ address, setAddress, handleFormSubmit }: SearchBoxProps) => {
     const { selectedRadio, handleRadioChange } = useRadio();
-    const { address, setAddress, handleFormSubmit } = useRequestForm();
 
     const handleInput = (e: ChangeEvent<HTMLInputElement>) => {
         setAddress(e.target.value);
