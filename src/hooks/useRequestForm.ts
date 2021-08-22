@@ -4,8 +4,8 @@ import { makeRequest } from '../services/fetch-utils';
 const useRequestForm = (method: string) => {
     const [results, setResults] = useState<unknown>(null);
     const [address, setAddress] = useState('');
-    const [body, setBody] = useState(null); 
-    const [token, setToken] = useState('');
+    const [body] = useState(null); 
+    const [token] = useState('');
 
     const handleInput = (e: ChangeEvent<HTMLInputElement>) => {
         setAddress(e.target.value);
