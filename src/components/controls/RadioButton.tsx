@@ -11,13 +11,14 @@ type RadioProps = {
 const RadioButton = ({ labelText, radioGroup, radioValue, handleRadioChange, selectedRadio }: RadioProps) => {
     return (
         <label className="radioLabel">
-            <span>{labelText}</span>
             <input
                 type="radio" 
                 name={radioGroup} 
                 value={radioValue}
                 onChange={handleRadioChange} 
                 checked={selectedRadio === radioValue} />
+            <span>{labelText}</span>
+
         </label>
     )
 };

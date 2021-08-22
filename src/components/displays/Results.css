@@ -1,3 +1,11 @@
 .Results {
-    background-color: tan;
+    padding: 1rem;
+    max-width: 100vw;
+}
+
+.Results p, .Results .resultsBody {
+    background-color: white;
+    padding: 1rem;
+    box-shadow: black 4px 4px;
+    word-wrap: break-word;
 }

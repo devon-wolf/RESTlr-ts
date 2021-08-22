@@ -1,10 +1,18 @@
 import React from 'react';
 import './Results.css';
 
-const Results = () => {
+type ResultsProps = { results: unknown };
+
+const Results = ({ results }: ResultsProps) => {
     return (
         <div className="Results">
-            Results
+            {results
+                ?   <div className="resultsBody">
+                    {JSON.stringify(results)}
+                    </div>
+                : <p>Enter URL above.</p>    
+            }
+                
         </div>
     )
 };
