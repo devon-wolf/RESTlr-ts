@@ -1,26 +1,38 @@
 .SearchBox {
-    display: grid;
-    grid-template-rows: min-content min-content;
     background-color: lightseagreen;
 }
 
 .SearchBox form {
     padding: 1rem;
+    max-width: 100vw;
+    display: grid;
+    grid-template-columns: min-content 1fr;
+    background-color: lightskyblue;
 }
 
 .RadioGroup {
-    padding: 1rem;
-    padding-left: 0;
+    /* padding: 1rem 0; */
+    /* width: 100%; */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: olive;
 }
 
 .radioLabel {
     cursor: pointer;
+    background-color: chartreuse;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    /* padding: 1rem; */
 }
 
 .radioLabel span {
     background-color: rebeccapurple;
     padding: 1rem;
     color: white;
+    width: 100%;
 }
 
 .radioLabel input[type=radio] {
@@ -31,11 +43,18 @@
     background-color: purple;
     color: white;
     font-weight: bold;
+    /* width: 100%;
+    height: 100%; */
 }
 
 .addressBar {
     background-color: purple;
     padding: 1rem;
-    display: grid;
-    grid-template-columns: 1fr min-content;
+    text-align: center;
+    /* display: grid;
+    grid-template-columns: min-content; */
+}
+
+.addressBar input {
+    margin-bottom: 1rem;
 }
