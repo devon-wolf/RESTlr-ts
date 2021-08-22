@@ -7,9 +7,9 @@ const Results = ({ results }: ResultsProps) => {
     return (
         <div className="Results">
             {results
-                ?   <p>
+                ?   <div className="resultsBody">
                     {JSON.stringify(results)}
-                    </p>
+                    </div>
                 : <p>Enter URL above.</p>    
             }
                 
