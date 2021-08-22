@@ -34,13 +34,14 @@ const SearchBox = ({
                     handleRadioChange={handleRadioChange}
                     selectedRadio={method}
                 />
+                <div className="addressBar">
+                    <input
+                        value={address}
+                        onInput={handleInput}
+                    />
 
-                <input
-                    value={address}
-                    onInput={handleInput}
-                />
-
-                <button>CLICK</button>
+                    <button>CLICK</button>
+                </div>
             </form>
         </div>
     )
