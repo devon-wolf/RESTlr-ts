@@ -14,7 +14,8 @@ describe('String formatting utils', () => {
         '"character": "Fry"',
         `"quote": "I'm not a robot! I don't like having discs crammed into me; unless they're\nOreos. And then, only in the mouth."`,
         `"image": "https://res.cloudinary.com/dzxqhkyqd/image/upload/v1554904133/fry.png"`,
-        '}'
+        '}',
+        ']'
     ];
 
     expect(makeJSONPretty(startingString)).toEqual(expectation);
