@@ -7,11 +7,13 @@
     align-items: flex-start;
 }
 
-/* TODO figure out how to contain x-axis better */
 .Results p, .Results .resultsBody {
     width: 90%;
     background-color: white;
     padding: 1rem;
     box-shadow: black 4px 4px;
-    word-wrap: break-word;
+}
+
+.resultsBody {
+    overflow-x: scroll;
 }
