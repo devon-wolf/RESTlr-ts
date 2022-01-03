@@ -1,5 +1,6 @@
 .MainPage {
+    /* Search form and results display */
     display: grid;
-    grid-template-rows: min-content 1fr; /* Search form and results display */
+    grid-template-rows: min-content 1fr; 
     row-gap: 1rem;
 }

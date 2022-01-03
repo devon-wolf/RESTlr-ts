@@ -1,6 +1,8 @@
 .Header {
     display: flex;
     align-items: center;
+    height: min-content;
+    margin: 1rem;
 }
 
 .Header h2 {
