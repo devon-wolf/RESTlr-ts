@@ -13,7 +13,6 @@ const useRequestForm = (method: string) => {
 
     const handleFormSubmit = async (e: FormEvent) => {
         e.preventDefault();
-        console.log(method);
         let response = await makeRequest(method, address, JSON.stringify(body), token);
         setResults(response || null);
         setAddress('');
