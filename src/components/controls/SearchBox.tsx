@@ -4,6 +4,8 @@ import RadioGroup from './RadioGroup';
 
 type SearchBoxProps = {
     method: string;
+    rows: string;
+    cols: string;
     handleRadioChange: FormEventHandler;
     address: string;
     handleInput: FormEventHandler;
@@ -35,12 +37,22 @@ const SearchBox = ({
                     selectedRadio={method}
                 />
                 <div className="addressBar">
+                    <label htmlFor="url"></label>
                     <input
+                        aria-label="url"
                         value={address}
                         onInput={handleInput}
                     />
 
                     <button>CLICK</button>
+                    <textarea
+                      aria-label="request"
+                      placeholder="JSON reuqest"
+                      rows="10"
+                      cols="50"
+                      name="body"
+                      >
+                      </textarea>
                 </div>
             </form>
         </div>
