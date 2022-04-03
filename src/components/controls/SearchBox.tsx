@@ -41,6 +41,13 @@ const SearchBox = ({
                     />
 
                     <button>CLICK</button>
+                    <textarea
+                      placeholder="JSON reuqest"
+                      rows="10"
+                      cols="50"
+                      name="body"
+                      >
+                      </textarea>
                 </div>
             </form>
         </div>
