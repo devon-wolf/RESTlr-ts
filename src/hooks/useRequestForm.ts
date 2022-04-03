@@ -1,7 +1,9 @@
 import { FormEvent, ChangeEvent, useState } from 'react';
 import { makeRequest } from '../services/fetch-utils';
 
-const useRequestForm = (method: string): {
+const useRequestForm = (
+  method: string
+): {
   results: unknown;
   address: string;
   handleInput: (e: ChangeEvent<HTMLInputElement>) => void;
