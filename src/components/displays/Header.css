@@ -1,12 +1,12 @@
 .Header {
-    display: flex;
-    align-items: center;
-    height: min-content;
-    margin: 1rem;
+  display: flex;
+  align-items: center;
+  height: min-content;
+  margin: 1rem;
 }
 
 .Header h2 {
-    background-color: yellowgreen;
-    padding: 1rem;
-    box-shadow: black 4px 4px;
+  background-color: yellowgreen;
+  padding: 1rem;
+  box-shadow: black 4px 4px;
 }
