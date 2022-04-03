@@ -13,7 +13,7 @@ const useRequestForm = (method: string) => {
 
   const handleFormSubmit = async (e: FormEvent) => {
     e.preventDefault();
-    let response = await makeRequest(
+    const response = await makeRequest(
       method,
       address,
       JSON.stringify(body),
