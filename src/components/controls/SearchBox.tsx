@@ -37,7 +37,9 @@ const SearchBox = ({
                     selectedRadio={method}
                 />
                 <div className="addressBar">
+                    <label htmlFor="url"></label>
                     <input
+                        name="addressBar"
                         value={address}
                         onInput={handleInput}
                     />
