@@ -16,7 +16,7 @@ const SearchBox = ({
   address,
   handleInput,
   handleFormSubmit,
-}: SearchBoxProps) => {
+}: SearchBoxProps): JSX.Element => {
   return (
     <div className="SearchBox">
       <form onSubmit={handleFormSubmit}>

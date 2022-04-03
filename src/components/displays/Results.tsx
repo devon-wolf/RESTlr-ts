@@ -3,7 +3,7 @@ import './Results.css';
 
 type ResultsProps = { results: unknown };
 
-const Results = ({ results }: ResultsProps) => {
+const Results = ({ results }: ResultsProps): JSX.Element => {
   return (
     <div className="Results">
       {results ? (

@@ -1,6 +1,9 @@
 import { ChangeEvent, useState } from 'react';
 
-const useRadio = () => {
+const useRadio = (): {
+  method: string;
+  handleRadioChange: (e: ChangeEvent<HTMLInputElement>) => void;
+} => {
   const [method, setMethod] = useState('GET');
 
   const handleRadioChange = (e: ChangeEvent<HTMLInputElement>) => {

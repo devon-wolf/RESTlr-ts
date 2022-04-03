@@ -14,7 +14,7 @@ const RadioButton = ({
   radioValue,
   handleRadioChange,
   selectedRadio,
-}: RadioProps) => {
+}: RadioProps): JSX.Element => {
   return (
     <label className="radioLabel">
       <input

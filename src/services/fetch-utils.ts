@@ -1,7 +1,4 @@
-export const getRequest = async (
-  address: string,
-  token?: string
-): Promise<JSON | void> => {
+export const getRequest = async (address: string): Promise<JSON | void> => {
   try {
     const response = await fetch(address);
     const json = await response.json();
@@ -10,6 +7,7 @@ export const getRequest = async (
     console.log(error);
   }
 };
+
 // adapted from my own code here: https://github.com/devon-wolf/RESTlr/blob/main/src/services/api-utils.js
 export const makeRequest = async (
   method: string,

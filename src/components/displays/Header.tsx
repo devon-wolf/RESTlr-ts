@@ -1,7 +1,7 @@
 import React from 'react';
 import './Header.css';
 
-const Header = () => {
+const Header = (): JSX.Element => {
   return (
     <header className="Header">
       <h2>RESTlr</h2>

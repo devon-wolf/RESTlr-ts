@@ -6,7 +6,7 @@ import useRequestForm from '../hooks/useRequestForm';
 
 import './MainPage.css';
 
-const MainPage = () => {
+const MainPage = (): JSX.Element => {
   const { method, handleRadioChange } = useRadio();
   const { results, address, handleInput, handleFormSubmit } =
     useRequestForm(method);

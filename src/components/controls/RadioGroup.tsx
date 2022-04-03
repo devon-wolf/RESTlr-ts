@@ -13,7 +13,7 @@ const RadioGroup = ({
   radioNames,
   handleRadioChange,
   selectedRadio,
-}: RadioGroupProps) => {
+}: RadioGroupProps): JSX.Element => {
   return (
     <div className="RadioGroup">
       {radioNames.map((name) => (
