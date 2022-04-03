@@ -4,6 +4,7 @@ import { rest } from 'msw';
 import { setupServer } from 'msw/node';
 import SearchBox from './SearchBox';
 
+
 const server = setupServer(
     rest.get('https://rickandmortyapi.com/api/character', (req, res, ctx) => {
         ctx.json({
@@ -30,7 +31,31 @@ describe('SearchBox', () => {
         radios.map(radio => {
            return expect(radio).toBeInTheDocument();
         })
+
         //check that number of buttons is correct
         expect(radios.length).toEqual(5);
+
+        //verify that address bar is on the screen
+        const AddressBar = screen.getByLabelText('url');
+        expect(AddressBar).toBeInTheDocument();
+        
+        //verify that submit button is on the screen
+        const requestButton =  screen.getByRole('button');
+        expect(requestButton).toBeInTheDocument();
+        
+        //verify JSON textbox is on the screen
+        const jsonInput = screen.getByLabelText('request');
+        expect(jsonInput).toBeInTheDocument();
+
+
+        // event.type(AddressBar, 'https://rickandmortyapi.com/api/character'); 
+
+        // const methodSelection = await screen.findByDisplayValue('GET');
+
+        // event.click(methodSelection);
+
+        // event.click(requestButton);
+
+
     })
 })

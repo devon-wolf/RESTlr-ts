@@ -39,13 +39,14 @@ const SearchBox = ({
                 <div className="addressBar">
                     <label htmlFor="url"></label>
                     <input
-                        name="addressBar"
+                        aria-label="url"
                         value={address}
                         onInput={handleInput}
                     />
 
                     <button>CLICK</button>
                     <textarea
+                      aria-label="request"
                       placeholder="JSON reuqest"
                       rows="10"
                       cols="50"
