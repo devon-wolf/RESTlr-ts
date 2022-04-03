@@ -4,6 +4,8 @@ import RadioGroup from './RadioGroup';
 
 type SearchBoxProps = {
     method: string;
+    rows: string;
+    cols: string;
     handleRadioChange: FormEventHandler;
     address: string;
     handleInput: FormEventHandler;
